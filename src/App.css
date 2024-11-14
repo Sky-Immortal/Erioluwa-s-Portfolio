@@ -1,0 +1,450 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Electrolize&display=swap');
+
+
+/* Defining CSS variables for colors */
+:root {
+  --color-primary: #FDD140;
+  --color-secondary: #000;
+  --color-accent: #fff;
+
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(calc(100vw - 100px), calc(100vh - 100px)) rotate(360deg);
+  }
+}
+
+/* oval shape */
+.oval {
+  position: fixed;
+  width: 20px;
+  /* Width of the oval */
+  height: 22px;
+  /* Height of the oval */
+  background-color: var(--color-primary);
+  /* Color of the oval */
+  border-radius: 50%;
+  /* Makes it oval */
+  pointer-events: none;
+  /* Prevent interaction */
+  transition: transform 0.2s;
+  z-index: -1;
+  /* Smooth transition for movement */
+}
+
+/* Background wave styles */
+.wave__background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+}
+
+@keyframes waveRight {
+  100% {
+    transform: rotate(360deg);
+    /* Rotate right */
+  }
+}
+
+@keyframes waveLeft {
+  100% {
+    transform: rotate(-360deg);
+    /* Rotate left */
+  }
+}
+
+.wave-1 {
+  animation: waveLeft 40s linear infinite;
+  transform-origin: 13px 25px;
+}
+
+.wave-2 {
+  animation: waveRight 20s linear infinite;
+  transform-origin: 13px 25px;
+
+}
+
+.wave-3 {
+  animation: waveLeft 25s linear infinite;
+  transform-origin: 84px 93px;
+
+}
+
+.wave-4 {
+  animation: waveRight 35s linear infinite;
+  transform-origin: 84px 93px;
+
+}
+
+body {
+  background-color: #E0E0E0;
+}
+
+body * {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  color: #595959;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Anta", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111111 !important;
+
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+
+/*Hero section*/
+.hero {
+  margin: 10em;
+}
+
+.hero__social {
+  background-color: #fff;
+  padding: 2em 1em;
+  border-radius: 0px 2em 2em 0px;
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+  display: inline;
+}
+
+.hero__social a:hover {
+  color: var(--color-secondary);
+}
+
+/*Solo en Ordenadores*/
+@media (min-width: 768px) {
+  .hero__aboutme {
+    padding: 0 10em;
+  }
+
+  .certifications__card {
+    width: 200px;
+    height: 250px !important;
+
+  }
+
+}
+
+/*Solo en Telefonos*/
+@media (max-width: 768px) {
+  .certifications__card {
+    width: 375px;
+    text-align: center;
+    height: 250px !important;
+  }
+
+}
+
+/*Navbar*/
+.nav-item a:hover {
+  color: var(--color-secondary);
+}
+
+.nav-item>a.nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+.navbar-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 2em 2em 0px 0px;
+  background: #e0e0e0;
+  box-shadow: 8px -4px 60px #bebebe,
+    -20px 20px 60px #ffffff;
+  z-index: 99;
+}
+
+.navbar-mobile__item {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.navbar-mobile__item:hover {
+  color: var(--color-primary);
+}
+
+.navbar-mobile__item:active {
+  color: var(--color-secondary);
+}
+
+.navbar-mobile__item a {
+  padding: 0.8em;
+}
+
+.navbar-mobile__item a span {
+  display: block;
+  font-size: 0.7em;
+}
+
+/*Visual Elements*/
+span.divider {
+  background-color: var(--color-primary);
+  padding: 2px;
+  border-radius: 5em;
+  display: inline-block;
+  width: 15%;
+  margin: 5px;
+
+}
+
+.techstack {}
+
+
+ul.list__icon-check {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+ul.list__icon-check li {
+  padding-left: var(--icon-space);
+}
+
+ul.list__icon-check li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(var(--icon-space) * -1);
+  width: var(--icon-space);
+  color: var(--color-secondary);
+}
+
+.btn__split {
+
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn__split.btn__split-primary {
+  color: var(--color-primary);
+  background: #fff;
+  border: 1px solid var(--color-primary) !important;
+}
+
+.btn__split.btn__split-secondary {
+  color: var(--color-secondary);
+  background: #fff;
+  border: 1px solid var(--color-secondary) !important;
+}
+
+.btn__split.btn__split-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.5s ease-out;
+  z-index: -1;
+  background-color: var(--color-primary);
+  box-shadow: 20px 20px 60px var(--color-primary),
+    -20px -20px 60px var(--color-primary);
+}
+
+.btn__split.btn__split-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.5s ease-out;
+  z-index: -1;
+  background-color: var(--color-secondary);
+  box-shadow: 20px 20px 60px var(--color-secondary),
+    -20px -20px 60px var(--color-secondary),
+}
+
+.btn__split:hover::before {
+  width: 100%;
+}
+
+.btn__split.btn__split-primary:hover {
+  color: #fff !important;
+  box-shadow: 2px 2px 30px var(--color-primary),
+    -2px -2px 10px var(--color-primary),
+}
+
+.btn__split.btn__split-secondary:hover {
+  color: #fff !important;
+  box-shadow: 2px 2px 30px var(--color-secondary),
+    -2px -2px 10px var(--color-secondary);
+}
+
+/*Scroll*/
+.list-group-item.active {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+
+.scroll_UI::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll_UI::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+
+}
+
+
+.scroll_UI::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.scroll_UI::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+
+.scroll_UI::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.scroll_UI::-webkit-scrollbar-track:hover,
+.scroll_UI::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+/* Gallery.css */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* Responsive columns */
+  gap: 10px;
+  /* Optional: add some space between items */
+}
+
+.gallery-item {
+  display: flex;
+  /* Use flexbox to center the image */
+  justify-content: center;
+  /* Center the image horizontally */
+  align-items: center;
+  /* Center the image vertically */
+  overflow: hidden;
+  /* Ensure no overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for transform and box-shadow */
+  border-radius: 8px;
+  /* Optional: add border radius for styling */
+}
+
+/* Ensure images fill their container and maintain aspect ratio */
+.gallery-item img {
+  width: 100%;
+  /* Make images responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Cover the container while maintaining aspect ratio */
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: translateY(-10px);
+  /* Lift the image up */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  /* Blurred shadow effect */
+}
+
+/* Skills.css */
+.skills-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  gap: 20px; /* Space between skill items */
+}
+
+.skill-item {
+  position: relative; /* Position relative for absolute positioning of description */
+  width: 150px; /* Set a fixed width for the skill item */
+  overflow: hidden; /* Hide overflow to keep description within bounds */
+  border-radius: 8px; /* Optional: add border radius for styling */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.skill-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.skill-image {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: add border radius for styling */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.skill-name {
+  font-weight: bold; /* Make skill name bold */
+  margin-top: 10px; /* Space between image and name */
+}
+
+/* Style for the description overlay */
+.skill-description {
+  position: absolute; /* Position absolutely within the skill item */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  color: var(--color-secondary); /* Text color */
+  font-size: 40px; /* Font size for the description */
+  font-weight: bold; /* Make text bold */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease; /* Smooth transition for visibility */
+}
+
+/* Change image opacity on hover and show description */
+.skill-item:hover .skill-image {
+  opacity: 0.2; /* Reduce image opacity on hover */
+}
+
+.skill-item:hover .skill-description {
+  opacity: 1; /* Make description visible on hover */
+}
