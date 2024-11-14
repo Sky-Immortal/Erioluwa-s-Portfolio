@@ -38,7 +38,7 @@ class ScrollSpy extends Component  {
 
             <ListGroup id="list-example" data-aos="fade-up" data-aos-duration="1000" className='py-4'>
               <ListGroup.Item action href="#list-item-1">Skills</ListGroup.Item>
-              <ListGroup.Item action href="#list-item-2">Experience</ListGroup.Item>
+              {/* <ListGroup.Item action href="#list-item-2">Experience</ListGroup.Item> */}
               <ListGroup.Item action href="#list-item-3">Gallery</ListGroup.Item>
             </ListGroup>
           </div>
@@ -59,10 +59,10 @@ class ScrollSpy extends Component  {
                 </div>
             </div>
 
-            <div id="list-item-2" className='px-4 p-sm-0'> 
+            {/* <div id="list-item-2" className='px-4 p-sm-0'> 
                 <h3 data-aos="fade-right"  data-aos-duration="1000">Experience</h3>
-                {/* <Experience exp={this.state.experiences} /> */}
-            </div>   
+                 <Experience exp={this.state.experiences} /> 
+            </div>    */}
 
             <div id="list-item-3" className='px-2 p-sm-0'>
                 <h4>Gallery</h4>

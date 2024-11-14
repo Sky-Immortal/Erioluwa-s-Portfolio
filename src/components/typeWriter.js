@@ -13,7 +13,7 @@ const TypeWriter = ({ text, className, ...props }) => {
                 // If deleting, remove a character but leave the last character
                 setDisplayedText((prev) => prev.slice(0, prev.length - 1));
                 // Stop deleting when the displayed text length is 1 (to leave the last character)
-                if (displayedText.length <= 1) {
+                if (displayedText.length <= 2) {
                     setIsDeleting(false); // Start writing again when done deleting
                     setIndex(0); // Reset index to start typing from the beginning
                 }

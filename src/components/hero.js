@@ -25,15 +25,13 @@ class Hero extends Component
                     <div className="col-12 text-center">
 
                         {/* TypeWriter component displaying a welcome message */}
-                        <TypeWriter text="I'm creative. I'm hard working. I'm ..." className="hero__aboutme" data-aos="fade-up"  as="p" />
+                        <TypeWriter text=" I'm creative. I'm hard working. I'm ..." className="hero__aboutme" data-aos="fade-up"  as="p" />
 
                         {/* Main heading with animation attributes */}
                         <h1  data-aos="zoom-in"  data-aos-duration="750" className="color-secondary" >ERIOLUWA ADEAGA </h1>
                         
                         {/* Divider with animation */}
-                        <span className="divider" data-aos="zoom-out-right"></span>
-
-                        
+                        <span className="divider" data-aos="zoom-out-right"></span>                        
                     </div>
                     <div className="col-12 text-center">
                         <button 
@@ -51,7 +49,6 @@ class Hero extends Component
                 <SocialButton />
 
             </div>
-           
 
       )
     }
