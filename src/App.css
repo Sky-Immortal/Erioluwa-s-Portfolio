@@ -1,8 +1,6 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Electrolize&display=swap');
 
-
-/* Defining CSS variables for colors */
 :root {
   --color-primary: #FDD140;
   --color-secondary: #000;
@@ -10,7 +8,7 @@
 
 }
 
-/* Global styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,46 +24,32 @@
   }
 }
 
-/* oval shape */
 .oval {
   position: fixed;
   width: 20px;
-  /* Width of the oval */
+
   height: 22px;
-  /* Height of the oval */
+
   background-color: var(--color-primary);
-  /* Color of the oval */
+
   border-radius: 50%;
-  /* Makes it oval */
+
   pointer-events: none;
-  /* Prevent interaction */
+
   transition: transform 0.2s;
   z-index: -1;
-  /* Smooth transition for movement */
-}
-
-/* Background wave styles */
-.wave__background {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
 
 }
 
 @keyframes waveRight {
   100% {
     transform: rotate(360deg);
-    /* Rotate right */
   }
 }
 
 @keyframes waveLeft {
   100% {
     transform: rotate(-360deg);
-    /* Rotate left */
   }
 }
 
@@ -126,8 +110,6 @@ h5 {
   color: var(--color-secondary);
 }
 
-
-/*Hero section*/
 .hero {
   margin: 10em;
 }
@@ -145,7 +127,6 @@ h5 {
   color: var(--color-secondary);
 }
 
-/*Solo en Ordenadores*/
 @media (min-width: 768px) {
   .hero__aboutme {
     padding: 0 10em;
@@ -159,7 +140,6 @@ h5 {
 
 }
 
-/*Solo en Telefonos*/
 @media (max-width: 768px) {
   .certifications__card {
     width: 375px;
@@ -169,7 +149,7 @@ h5 {
 
 }
 
-/*Navbar*/
+
 .nav-item a:hover {
   color: var(--color-secondary);
 }
@@ -216,7 +196,7 @@ h5 {
   font-size: 0.7em;
 }
 
-/*Visual Elements*/
+
 span.divider {
   background-color: var(--color-primary);
   padding: 2px;
@@ -226,8 +206,6 @@ span.divider {
   margin: 5px;
 
 }
-
-.techstack {}
 
 
 ul.list__icon-check {
@@ -314,7 +292,7 @@ ul.list__icon-check li:before {
     -2px -2px 10px var(--color-secondary);
 }
 
-/*Scroll*/
+
 .list-group-item.active {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
@@ -353,38 +331,29 @@ ul.list__icon-check li:before {
   background: #d4d4d4;
 }
 
-/* Gallery.css */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  /* Responsive columns */
   gap: 10px;
-  /* Optional: add some space between items */
 }
 
 .gallery-item {
   display: flex;
-  /* Use flexbox to center the image */
   justify-content: center;
-  /* Center the image horizontally */
   align-items: center;
-  /* Center the image vertically */
   overflow: hidden;
-  /* Ensure no overflow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth transition for transform and box-shadow */
   border-radius: 8px;
-  /* Optional: add border radius for styling */
 }
 
-/* Ensure images fill their container and maintain aspect ratio */
 .gallery-item img {
   width: 100%;
-  /* Make images responsive */
+
   height: auto;
-  /* Maintain aspect ratio */
+
   object-fit: cover;
-  /* Cover the container while maintaining aspect ratio */
+
 }
 
 /* Hover effect */
@@ -397,54 +366,81 @@ ul.list__icon-check li:before {
 
 /* Skills.css */
 .skills-container {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping of items */
-  gap: 20px; /* Space between skill items */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow wrapping of items */
+  gap: 20px;
+  /* Space between skill items */
 }
 
 .skill-item {
-  position: relative; /* Position relative for absolute positioning of description */
-  width: 150px; /* Set a fixed width for the skill item */
-  overflow: hidden; /* Hide overflow to keep description within bounds */
-  border-radius: 8px; /* Optional: add border radius for styling */
-  text-align: center; /* Center text */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  position: relative;
+  /* Position relative for absolute positioning of description */
+  width: 150px;
+  /* Set a fixed width for the skill item */
+  overflow: hidden;
+  /* Hide overflow to keep description within bounds */
+  border-radius: 8px;
+  /* Optional: add border radius for styling */
+  text-align: center;
+  /* Center text */
+  transition: transform 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 .skill-item:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
 }
 
 .skill-image {
-  width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: add border radius for styling */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  width: 100%;
+  /* Make image responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional: add border radius for styling */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for opacity */
 }
 
 .skill-name {
-  font-weight: bold; /* Make skill name bold */
-  margin-top: 10px; /* Space between image and name */
+  font-weight: bold;
+  /* Make skill name bold */
+  margin-top: 10px;
+  /* Space between image and name */
 }
 
 /* Style for the description overlay */
 .skill-description {
-  position: absolute; /* Position absolutely within the skill item */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust position to center */
-  color: var(--color-secondary); /* Text color */
-  font-size: 40px; /* Font size for the description */
-  font-weight: bold; /* Make text bold */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease; /* Smooth transition for visibility */
+  position: absolute;
+  /* Position absolutely within the skill item */
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Adjust position to center */
+  color: var(--color-secondary);
+  /* Text color */
+  font-size: 40px;
+  /* Font size for the description */
+  font-weight: bold;
+  /* Make text bold */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 1s ease;
+  /* Smooth transition for visibility */
 }
 
 /* Change image opacity on hover and show description */
 .skill-item:hover .skill-image {
-  opacity: 0.2; /* Reduce image opacity on hover */
+  opacity: 0.2;
+  /* Reduce image opacity on hover */
 }
 
 .skill-item:hover .skill-description {
-  opacity: 1; /* Make description visible on hover */
+  opacity: 1;
+  /* Make description visible on hover */
 }
